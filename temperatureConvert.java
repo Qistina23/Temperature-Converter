@@ -5,16 +5,14 @@ public class temperatureConvert{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         
-        // Prompt user for conversion choice
         System.out.println("Choose Conversion Type:");
         System.out.println("1: Fahrenheit to Celsius (Using Dialog Box)");
         System.out.println("2: Celsius to Fahrenheit (Using Console)");
         System.out.print("Enter your choice: ");
         
         int choice = scanner.nextInt();
-        
         if (choice == 1) {
-            // Fahrenheit to Celsius conversion (using dialog box)~
+            // Fahrenheit to Celsius
             String input = JOptionPane.showInputDialog("Enter temperature in Fahrenheit:");
             try {
                 double fahrenheit = Double.parseDouble(input);
@@ -24,13 +22,12 @@ public class temperatureConvert{
                 JOptionPane.showMessageDialog(null, "Invalid input! Please enter a valid number.");
             }
         } else if (choice == 2) {
-            // Celsius to Fahrenheit conversion (using console)
+            // Celsius to Fahrenheit
             System.out.print("Enter temperature in Celsius: ");
             double celsius = scanner.nextDouble();
             double fahrenheit = (celsius * 9 / 5) + 32;
             System.out.println("Temperature in Fahrenheit: " + fahrenheit + "°F");
         } else {
-            // Invalid choice
             System.out.println("Wrong Choice.");
         }
         
